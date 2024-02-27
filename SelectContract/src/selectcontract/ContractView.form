@@ -78,18 +78,18 @@
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="Origin" min="-2" pref="52" max="-2" attributes="0"/>
-                                  <Component id="Order" min="-2" pref="52" max="-2" attributes="0"/>
+                                  <Component id="jLabel2" min="-2" pref="52" max="-2" attributes="0"/>
+                                  <Component id="jLabel5" min="-2" pref="52" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="ContractID" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
-                              <Component id="Destination" alignment="1" min="-2" pref="71" max="-2" attributes="0"/>
+                              <Component id="jLabel1" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                              <Component id="jLabel3" alignment="1" min="-2" pref="71" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="ContactResult" min="-2" pref="196" max="-2" attributes="0"/>
-                              <Component id="OriginResult" min="-2" pref="196" max="-2" attributes="0"/>
-                              <Component id="DestinationResult" min="-2" pref="196" max="-2" attributes="0"/>
-                              <Component id="OrderResult" min="-2" pref="196" max="-2" attributes="0"/>
+                              <Component id="jLabelContractID" min="-2" pref="196" max="-2" attributes="0"/>
+                              <Component id="jLabelOriginCity" min="-2" pref="196" max="-2" attributes="0"/>
+                              <Component id="jLabelDestCity" min="-2" pref="196" max="-2" attributes="0"/>
+                              <Component id="jLabelOrderItem" min="-2" pref="196" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="127" max="-2" attributes="0"/>
                       </Group>
@@ -103,7 +103,7 @@
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jNextButton" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="Result" alignment="0" min="-2" pref="437" max="-2" attributes="0"/>
+                              <Component id="jLabelContractCount" alignment="0" min="-2" pref="437" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="98" max="32767" attributes="0"/>
                       </Group>
@@ -116,23 +116,23 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="ContractID" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="ContactResult" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelContractID" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="Origin" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="OriginResult" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelOriginCity" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="Destination" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="DestinationResult" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelDestCity" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="Order" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="OrderResult" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelOrderItem" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -141,19 +141,19 @@
                       <Component id="jNextButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="Result" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelContractCount" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="19" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="ContractID">
+        <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
             <Property name="text" type="java.lang.String" value="Contract ID:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="Origin">
+        <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -161,12 +161,12 @@
             <Property name="text" type="java.lang.String" value="Origin:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="Destination">
+        <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
             <Property name="text" type="java.lang.String" value="Destination:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="Order">
+        <Component class="javax.swing.JLabel" name="jLabel5">
           <Properties>
             <Property name="text" type="java.lang.String" value="Order:"/>
           </Properties>
@@ -192,27 +192,27 @@
             <Property name="text" type="java.lang.String" value="Next"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="Result">
+        <Component class="javax.swing.JLabel" name="jLabelContractCount">
           <Properties>
             <Property name="text" type="java.lang.String" value="n out of x Contracts"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="ContactResult">
+        <Component class="javax.swing.JLabel" name="jLabelContractID">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="4"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="OriginResult">
+        <Component class="javax.swing.JLabel" name="jLabelOriginCity">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="4"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="DestinationResult">
+        <Component class="javax.swing.JLabel" name="jLabelDestCity">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="4"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="OrderResult">
+        <Component class="javax.swing.JLabel" name="jLabelOrderItem">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="4"/>
           </Properties>
