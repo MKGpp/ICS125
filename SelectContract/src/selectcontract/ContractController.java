@@ -68,16 +68,14 @@ class ContractController {
         public void actionPerformed(ActionEvent e) {
             if (theModel.getCurrentContractNum() == 0) {
                 return;
-            }
-            
+            }            
             try {
                 theModel.prevContract();
             } catch (Exception ex) {
                 System.out.println(ex);
                 theView.displayErrorMessage(
                         "Error: There is a problem setting a previous contract.");
-            }
-            
+            }            
             setUpDisplay();
         }
     }
@@ -88,23 +86,20 @@ class ContractController {
         public void actionPerformed(ActionEvent e) {
             if (theModel.getCurrentContractNum() == theModel.getContractCount() - 1) {
                 return;
-            }
-            
+            }      
             try {
                 theModel.nextContract();
             } catch (Exception ex) {
                 System.out.println(ex);
                 theView.displayErrorMessage(
                         "Error: There is a problem setting the next contract.");
-            }
-            
+            }            
             setUpDisplay();
         }
     }
     
     class BidButtonListener implements ActionListener {
-        
-    
+            
         @Override
         public void actionPerformed(ActionEvent e) {
             if (theModel.getCurrentContractNum() == 0) {
