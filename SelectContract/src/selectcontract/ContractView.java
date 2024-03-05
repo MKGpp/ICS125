@@ -197,24 +197,40 @@ public class ContractView extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this, errorMessage);
     }
     
+    void setPrevButtonEnabled(boolean enabled) {
+        jPrevButton.setEnabled(enabled);
+    }
+
+    void setNextButtonEnabled(boolean enabled) {
+        jNextButton.setEnabled(enabled);
+    }
+    
+    void setBidButtonEnabled(boolean enabled) {
+        jBidButton.setEnabled(enabled);
+    }
+    
     void setContractID(String contractID) {
         jLabelContractID.setText(contractID);
     }
+    
     void setOriginCity(String originCity) {
         jLabelOriginCity.setText(originCity);
     }
+    
     void setDestCity(String destCity) {
         jLabelDestCity.setText(destCity);
     }
+    
     void setOrderItem(String orderItem) {
         jLabelOrderItem.setText(orderItem);
     }
+    
     void setContractCount(String contractCount) {
         jLabelContractCount.setText(contractCount);
     }
     
     void updateContractViewPanel(int currentContractNum, int contractCount) {
-        setContractCount(currentContractNum) + " of " + contractCount + " contracts");
+        setContractCount((1 + currentContractNum) + " of " + contractCount + " contracts");
     }
     
     private void jPrevButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPrevButtonActionPerformed
