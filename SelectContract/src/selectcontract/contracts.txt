@@ -2,3 +2,5 @@
 8EKD,Vancouver,Victoria,Vegetable
 3HQC,Seattle,Vancouver,Pharmaceutical
 9DF8,Seoul,Busan,Contents
+A32,Nanaimo,Victoria,Gear
+4ESW,Victoria,Banff,Flowers

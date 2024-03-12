@@ -6,6 +6,8 @@ package selectcontract;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 
 /**
  *
@@ -23,13 +25,14 @@ class ContractController {
     
     ContractController(ContractView theView, ContractModel theModel) {
         this.theView = theView;
-        this.theModel = theModel;
+        this.theModel = theModel;        
         
         this.theView.addPrevListener(new PrevButtonListener());
         this.theView.addBidListener(new BidButtonListener());
         this.theView.addNextListener(new NextButtonListener());
+        this.theView.addcomboBoxListener(new ComboListener());
+        this.theView.setOriginCityList(theModel.getOriginCityList());
         
-        theView.setBidButtonEnabled(false);
         setUpDisplay();
     }
     
@@ -102,9 +105,30 @@ class ContractController {
             
         @Override
         public void actionPerformed(ActionEvent e) {
-            if (theModel.getCurrentContractNum() == 0) {
+            try {
+                ConfirmBid cb;
+                cb = new ConfirmBid(theView, true, theModel.getTheContract());
+                cb.setLocationRelativeTo(null);
+                cb.setVisible(true);
+            } catch (Exception ex) {
+                System.out.println("ex");
+                theView.displayErrorMessage(
+                "Error: The numbers entereed must be integers.");
             }
-            setUpDisplay();
         }   
-    }  
+    }
+    
+    class ComboListener implements ItemListener {
+        
+        @Override
+        public void itemStateChanged(ItemEvent e) {
+            System.out.println(e.getItem().toString());
+            if (e.getStateChange() == ItemEvent.SELECTED) {
+                String selectedCity = e.getItem().toString();
+                System.out.println(selectedCity);
+                theModel.updateContractList(selectedCity);
+                setUpDisplay();
+            }
+        }
+    }
 }

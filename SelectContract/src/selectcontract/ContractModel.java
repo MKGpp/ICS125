@@ -8,6 +8,8 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 /**
  *
@@ -16,7 +18,9 @@ import java.util.ArrayList;
 class ContractModel {
     
     private ArrayList<Contract> theContracts;
+    private ArrayList<Contract> theContractsAll;
     private int contractCounter;
+    private SortedSet<String> originCityList;
     
     public static final int NUMBER_OF_CONTRACT_ATTRIBUTES = 4;
     public static final int INDEX_OF_CONTRACT_ID = 0;
@@ -24,13 +28,15 @@ class ContractModel {
     public static final int INDEX_OF_DEST_CITY = 2;
     public static final int INDEX_OF_ORDER_ITEM = 3;
     
+    public static final String ALL_COMBO_OPTION = "All";    
     public static final String FILE_PATH = "M:\\ICS2024\\ICS125\\SelectContract\\src\\selectcontract\\contracts.txt";
 
             
     
     ContractModel() {
         contractCounter = 0;
-        theContracts = new ArrayList<>();        
+        theContracts = new ArrayList<>();   
+        originCityList = new TreeSet<>();
         
         try {
             FileReader fileReader = new FileReader(FILE_PATH);
@@ -50,11 +56,14 @@ class ContractModel {
                                                    , destCity
                                                    , orderItem);
                 theContracts.add(dataContract);
+                originCityList.add(originCity);
             }
+            theContractsAll = theContracts;
             fileReader.close();
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
         }
+        originCityList.add(ALL_COMBO_OPTION);
     }
     
     boolean foundContract() {
@@ -78,5 +87,17 @@ class ContractModel {
         if (contractCounter > 0) {
             contractCounter--;
         }
+    }
+    public String[] getOriginCityList() {
+        String[] a;
+        a = originCityList.toArray(new String[originCityList.size()]);
+        return a;
+    }
+    public void updateContractList(String city) {
+        theContracts = new ArrayList<>(theContractsAll);
+        if (!"All".equals(city)) {
+            theContracts.removeIf(s -> !s.contains(city));
+        }
+        contractCounter = 0;
     }
 }
