@@ -11,7 +11,7 @@ import java.awt.event.ItemListener;
 
 /**
  *
- * @author c0345094
+ * @author Matthew Golshani
  */
 final class ContractController {
     

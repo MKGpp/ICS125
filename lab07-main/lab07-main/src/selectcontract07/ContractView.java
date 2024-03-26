@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author c0345094
+ * @author Matthew Golshani
  */
 public class ContractView extends javax.swing.JFrame {
 

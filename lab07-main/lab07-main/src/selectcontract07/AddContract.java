@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author c0345094
+ * @author Matthew Golshani
  */
 public class AddContract extends javax.swing.JDialog {
     private ContractController controller;

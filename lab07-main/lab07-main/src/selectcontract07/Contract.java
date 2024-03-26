@@ -6,7 +6,7 @@ package selectcontract07;
 
 /**
  *
- * @author c0345094
+ * @author Matthew Golshani
  */
 public class Contract {
     private String contractID;
